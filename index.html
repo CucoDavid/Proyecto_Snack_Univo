@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnackUNIVO - Máquina expendedora</title>
+  </head>
+  <body>
+    <header class="encabezado">
+      <h1>SnackUNIVO</h1>
+      <p>Máquina expendedora de refrigerios — Universidad de Oriente</p>
+    </header>
+
+    <main class="contenedor">
+      <section class="panel">
+        <h2>Catálogo de productos</h2>
+        <div class="filtros">
+          <input type="text" id="buscador" placeholder="Buscar por nombre..." />
+          <select id="filtro-estado">
+            <option value="todos">Todos</option>
+            <option value="disponibles">Disponibles</option>
+            <option value="agotados">Agotados</option>
+          </select>
+        </div>
+        <div id="catalogo" class="grid-catalogo"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Comprar producto</h2>
+        <div class="formulario">
+          <label for="select-compra">Producto:</label>
+          <select id="select-compra"></select>
+
+          <label for="cantidad-compra">Cantidad:</label>
+          <input type="number" id="cantidad-compra" min="1" step="1" />
+
+          <button id="btn-comprar" type="button">Comprar</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Reponer producto</h2>
+        <div class="formulario">
+          <label for="select-reposicion">Producto:</label>
+          <select id="select-reposicion"></select>
+
+          <label for="cantidad-reposicion">Unidades a agregar:</label>
+          <input type="number" id="cantidad-reposicion" min="1" step="1" />
+
+          <button id="btn-reponer" type="button">Reponer</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Historial de movimientos</h2>
+        <div class="filtros">
+          <select id="filtro-movimiento">
+            <option value="todos">Todos</option>
+            <option value="venta">Solo ventas</option>
+            <option value="reposicion">Solo reposiciones</option>
+          </select>
+        </div>
+        <div class="tabla-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Tipo</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio unit.</th>
+                <th>Importe</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpo-historial"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Resumen</h2>
+        <div class="resumen">
+          <div class="tarjeta-resumen">
+            <span>Ingresos totales</span>
+            <strong id="resumen-ingresos">$0.00</strong>
+          </div>
+          <div class="tarjeta-resumen">
+            <span>Unidades vendidas</span>
+            <strong id="resumen-unidades">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <div id="mensaje" class="mensaje"></div>
+    </main>
+
+    <footer class="pie">
+      <p>SnackUNIVO — Proyecto de Ingeniería en Desarrollo de Software</p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
