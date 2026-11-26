@@ -1,6 +1,9 @@
+
 # SnackUNIVO
 
-Simulador de máquina expendedora de refrigerios — Proyecto de Ingeniería en Desarrollo de Software, Universidad de Oriente (UNIVO).
+Proyecto final de la materia Programación Estructurada — Universidad de Oriente (UNIVO).
+
+Simulador de máquina expendedora de refrigerios.
 
 ## Tecnologías
 
@@ -14,3 +17,10 @@ Simulador de máquina expendedora de refrigerios — Proyecto de Ingeniería en 
 
 ```bash
 npm install
+```
+
+## Ejecutar el proyecto
+
+```bash
+npm run dev
+```
